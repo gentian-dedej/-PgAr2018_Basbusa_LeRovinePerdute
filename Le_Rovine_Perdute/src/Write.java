@@ -25,7 +25,8 @@ public class Write
 			writer.writeComment("data saved");
 			
 			writer.writeCharacters( "\n");//serve per andare a capo
-			
+			writer.writeStartElement("solution");
+			writer.writeCharacters( "\n");//serve per andare a capo
 				writer.writeStartElement("route");//start route
 				
 					writer.writeAttribute("Team", "Metztli");
@@ -57,7 +58,8 @@ public class Write
 		}
 		writer.writeCharacters( "\n");
 				writer.writeEndElement(); // End routes
-				
+		writer.writeCharacters( "\n");//serve per andare a capo
+				writer.writeEndElement(); // End solution
 				writer.writeEndDocument(); //End Document
 				writer.flush();
 				writer.close();
